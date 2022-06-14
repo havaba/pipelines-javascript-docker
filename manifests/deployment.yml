@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "azooaks-434f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "azooaks-434f"
+  template:
+    metadata:
+      labels:
+        app: "azooaks-434f"
+    spec:
+      containers:
+        - name: "azooaks-434f"
+          image: "acrhavaba.azurecr.io/azooaks"
+          ports:
+          - containerPort: 8080
